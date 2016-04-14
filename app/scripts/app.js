@@ -30,9 +30,7 @@ angular
         controllerAs: 'about'
       })
         .when('/webhook', {
-        templateUrl: 'views/webhook.php',
-        controller: 'WebhookCtrl',
-        controllerAs: 'webhook'
+        templateUrl: 'views/webhook.php'
       })
       .otherwise({
         redirectTo: '/'
