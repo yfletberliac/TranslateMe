@@ -29,6 +29,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+        .when('/webhook', {
+        templateUrl: 'views/webhook.html',
+        controller: 'WebhookCtrl',
+        controllerAs: 'webhook'
+      })
       .otherwise({
         redirectTo: '/'
       });
