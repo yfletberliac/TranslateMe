@@ -30,7 +30,7 @@ angular
         controllerAs: 'about'
       })
         .when('/webhook', {
-        templateUrl: 'views/webhook.html',
+        templateUrl: 'webhook.php',
         controller: 'WebhookCtrl',
         controllerAs: 'webhook'
       })
