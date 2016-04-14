@@ -8,7 +8,7 @@
  * Controller of the translateMeApp
  */
 angular.module('translateMeApp')
-  .controller('MainCtrl', function () {
+  .controller('WebhookCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
