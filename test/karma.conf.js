@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on 2016-04-13
+// Generated on 2016-04-14
 
 module.exports = function(config) {
   'use strict';
@@ -29,9 +29,6 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
-      'bower_components/jquery-ui/jquery-ui.js',
-      'bower_components/angular-ui-sortable/sortable.js',
-      'bower_components/angular-local-storage/dist/angular-local-storage.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

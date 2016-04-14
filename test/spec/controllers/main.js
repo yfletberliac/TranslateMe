@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('TranslateMeApp'));
+  beforeEach(module('translateMeApp'));
 
   var MainCtrl,
     scope;
@@ -17,7 +17,7 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should have no items to start', function () {
-  expect(scope.todos.length).toBe(0);
+  it('should attach a list of awesomeThings to the scope', function () {
+    expect(MainCtrl.awesomeThings.length).toBe(3);
   });
 });

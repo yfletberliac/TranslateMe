@@ -1,4 +1,4 @@
-// Generated on 2016-04-13 using generator-angular 0.15.1
+// Generated on 2016-04-14 using generator-angular 0.15.1
 'use strict';
 
 // # Globbing
@@ -25,8 +25,6 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
-  var pkg = require('./package.json');
-
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -46,7 +44,6 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         }
       },
-
       jsTest: {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
@@ -67,34 +64,6 @@ module.exports = function (grunt) {
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
-      }
-    },
-
-    buildcontrol: {
-      options: {
-        dir: 'dist',
-        commit: true,
-        push: true,
-        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-      },
-      pages: {
-        options: {
-          remote: 'git@github.com:yfletberliac/todotomorrow.git',
-          branch: 'gh-pages'
-        }
-      },
-      heroku: {
-        options: {
-          remote: 'git@heroku.com:todotomorrow.git',
-          branch: 'master',
-          tag: pkg.version
-        }
-      },
-      local: {
-        options: {
-          remote: '../',
-          branch: 'build'
-        }
       }
     },
 
@@ -369,7 +338,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       dist: {
         options: {
-          module: 'TranslateMeApp',
+          module: 'translateMeApp',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
@@ -473,13 +442,6 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('deploy', [
-    'buildcontrol:stage'
-  ]);
-  grunt.registerTask('deploy_live', [
-    'buildcontrol:live'
-  ]);
-
   grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve:' + target]);
@@ -511,8 +473,6 @@ module.exports = function (grunt) {
     'usemin',
     'htmlmin'
   ]);
-
-  grunt.loadNpmTasks('grunt-build-control');
 
   grunt.registerTask('default', [
     'newer:jshint',

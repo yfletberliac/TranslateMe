@@ -2,22 +2,20 @@
 
 /**
  * @ngdoc overview
- * @name TranslateMeApp
+ * @name translateMeApp
  * @description
- * # TranslateMeApp
+ * # translateMeApp
  *
  * Main module of the application.
  */
 angular
-  .module('TranslateMeApp', [
+  .module('translateMeApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch',
-    'ui.sortable',
-    'LocalStorageModule'
+    'ngTouch'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -31,15 +29,7 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/webhook', {
-        templateUrl: 'views/webhook.html',
-        controller: 'WebhookCtrl',
-        controllerAs: 'webhook'
-      })
       .otherwise({
         redirectTo: '/'
       });
-  })
-  .config(['localStorageServiceProvider', function(localStorageServiceProvider){
-  localStorageServiceProvider.setPrefix('ls');
-}]);
+  });
